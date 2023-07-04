@@ -2,7 +2,7 @@
 3, 5 -> 243 (3⁵)
 2, 4 -> 16 */
 
-int Promt (string massege)
+/* int Promt (string massege)
 {
     System.Console.Write(massege);
     string readInput = System.Console.ReadLine();
@@ -35,4 +35,30 @@ int exponent = Prompt("Введите показатель: ");
 if(ValidateExponent(exponent))
 {
     System.Console.WriteLine($"Число {powerBase} в степени {exponent} равно {Power(powerBase, exponent)}");
+} */
+
+/* Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+452 -> 11
+82 -> 10
+9012 -> 12 */
+
+int Prompt(string massege)
+{
+    System.Console.Write(massege);
+    string readInput = System.Console.ReadLine();
+    int result = int.Parse(readInput);
+    return result;
 }
+
+int SumAllDigit(int number)
+{
+    int result = 0;
+    while (number > 0);
+     {
+        result += number % 10;
+        number = number / 10;
+     }
+     return result;
+}
+int number = Prompt("Введите число: ");
+System.Console.WriteLine($"Сумма всех чисел в цифре {number} = {SumAllDigit(number)}");
